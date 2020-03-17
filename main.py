@@ -21,7 +21,7 @@ def main():
     # Make sure to set use_context=True to use the new context based callbacks
     # Post version 12 this will no longer be necessary
     with open('TOKEN', 'r') as file:
-        token = file.readline()
+        token = file.readline().strip('\n')
     defaults = Defaults(parse_mode=ParseMode.HTML, quote=True)
     updater = Updater(token, use_context=True, defaults=defaults)
 
