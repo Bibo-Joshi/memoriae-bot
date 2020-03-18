@@ -12,8 +12,8 @@ from emoji import emojize
 
 HOMEPAGE: str = 'https://hirschheissich.gitlab.io/memoriae-bot/'
 """:obj:`str`: Homepage of this bot."""
-ADMIN: int = 74540223
-""":obj:`int`: Chat ID of the admin."""
+ADMIN: int = -1
+""":obj:`int`: Chat ID of the admin. Needs to be overridden in main.py"""
 CALLBACK_NO: str = 'dont_postpone'
 """:obj:`str`: Callback data for not postponing reminders."""
 
