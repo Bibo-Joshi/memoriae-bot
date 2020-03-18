@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 """The script that runs the bot."""
 import logging
+from configparser import ConfigParser
 from telegram import ParseMode
 from telegram.ext import Updater, Defaults
 
-from bot import register_dispatcher
+import bot
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -17,17 +18,22 @@ logger = logging.getLogger(__name__)
 
 def main():
     """Start the bot."""
+    # Read configuration values from bot.ini
+    config = ConfigParser()
+    config.read('bot.ini')
+    token = config['memoriae-bot']['token']
+    admin = config['memoriae-bot']['admins_chat_id']
+    bot.ADMIN = admin
+
     # Create the Updater and pass it your bot's token.
     # Make sure to set use_context=True to use the new context based callbacks
     # Post version 12 this will no longer be necessary
-    with open('TOKEN', 'r') as file:
-        token = file.readline().strip('\n')
     defaults = Defaults(parse_mode=ParseMode.HTML, quote=True)
     updater = Updater(token, use_context=True, defaults=defaults)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
-    register_dispatcher(dp)
+    bot.register_dispatcher(dp)
 
     # Start the Bot
     updater.start_polling()

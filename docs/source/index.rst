@@ -17,4 +17,5 @@
 
    bot
    contributing
+   hosting
    changelog
