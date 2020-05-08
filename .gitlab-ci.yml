@@ -7,12 +7,11 @@ pages:
   variables:
     GIT_SUBMODULE_STRATEGY: recursive
 
-  only:
-    refs:
-    - master
-    changes:
-    - "**/*.rst"
-    - "**/*.py"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+      changes:
+        - "**/*.rst"
+        - "**/*.py"
 
   image: python:3.7-slim
 
