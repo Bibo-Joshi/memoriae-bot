@@ -75,7 +75,7 @@ def error(update: Update, context: CallbackContext):
     context.bot.send_message(ADMIN, text)
 
     # we raise the error again, so the logger module catches it.
-    raise
+    raise  # pylint: disable=misplaced-bare-raise
 
 
 def keyboard(update: Optional[Update] = None,
@@ -166,9 +166,7 @@ def register_dispatcher(disptacher: Dispatcher) -> None:
 
     # Handle postponed reminders
     dp.add_handler(
-        PrefixHandler(prefix='@',
-                      command=dp.bot.get_me().username,
-                      callback=answer_postponed_reminder))
+        PrefixHandler(prefix='@', command=dp.bot.username, callback=answer_postponed_reminder))
 
     # Handle first time reminders
     dp.add_handler(MessageHandler(Filters.all, answer_reminder))

@@ -16,3 +16,10 @@ you would like to postpone the reminder.
 If not, you can just click ``No``. If you do want to postpone, click ``Yes`` and the bot will enter a
 specially formatted message for you. Send it as timed message and when it's due the bot will send you
 the original reminder again.
+
+Statistics
+----------
+
+This bot uses the `ptbstats <https://hirschheissich.gitlab.io/ptbstats/>`_ plugin to make some usage statistics
+available. The commands ``/first`` and ``/reps`` will provide statistics on all reminders sent for the first time and
+all repetitions, respectively. Note, that those commands will only work for the admin of the bot.

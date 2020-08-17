@@ -23,3 +23,6 @@ mb*
 
 # Bot token
 TOKEN
+
+# Venv
+venv/

@@ -2,6 +2,14 @@
 Changelog
 =========
 
+Version 1.1
+===========
+*Released 2020-08-17*
+
+**Enhancements:**
+
+* Include the `ptbstats <https://hirschheissich.gitlab.io/ptbstats/>`_ plugin for statistics
+
 Version 1.0.1
 =============
 *Released 2020-03-18*

@@ -4,7 +4,9 @@
 import logging
 from configparser import ConfigParser
 from telegram import ParseMode
-from telegram.ext import Updater, Defaults
+from telegram.ext import Updater, Defaults, PicklePersistence, Filters
+
+from ptbstats import set_dispatcher, register_stats, SimpleStats
 
 import bot
 
@@ -29,7 +31,18 @@ def main():
     # Make sure to set use_context=True to use the new context based callbacks
     # Post version 12 this will no longer be necessary
     defaults = Defaults(parse_mode=ParseMode.HTML, quote=True)
-    updater = Updater(token, use_context=True, defaults=defaults)
+    persistence = PicklePersistence('mb.pickle')
+    updater = Updater(token, use_context=True, defaults=defaults, persistence=persistence)
+
+    # Set up stats
+    set_dispatcher(updater.dispatcher)
+    regex_filter = Filters.regex(rf'\@{updater.bot.username} \d*')
+    register_stats(SimpleStats('reps', lambda u: bool(u.message and regex_filter(u))),
+                   admin_id=int(admin))
+    register_stats(SimpleStats(
+        'first', lambda u: bool(u.message and (Filters.private & ~regex_filter & ~Filters.command)
+                                (u))),
+                   admin_id=int(admin))
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
