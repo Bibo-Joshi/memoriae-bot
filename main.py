@@ -40,8 +40,9 @@ def main():
     register_stats(SimpleStats('reps', lambda u: bool(u.message and regex_filter(u))),
                    admin_id=int(admin))
     register_stats(SimpleStats(
-        'first', lambda u: bool(u.message and (Filters.private & ~regex_filter & ~Filters.command)
-                                (u))),
+        'first',
+        lambda u: bool(u.message and (Filters.chat_type.private & ~regex_filter & ~Filters.command)
+                       (u))),
                    admin_id=int(admin))
 
     # Get the dispatcher to register handlers
