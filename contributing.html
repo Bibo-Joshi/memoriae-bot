@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Hosting this bot" href="hosting.html" /><link rel="prev" title="bot Module" href="bot.html" />
 
     <link rel="shortcut icon" href="_static/memoriae-bot-icon.ico"/><!-- Generated with Sphinx 6.1.1 and Furo 2022.12.07 -->
-        <title>How To Contribute - Memoriae Bot documentation</title>
+        <title>&lt;no title&gt; - Memoriae Bot documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -165,9 +165,8 @@
 <li class="toctree-l1"><a class="reference internal" href="usage.html#statistics">Statistics</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Developer Reference</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="bot.html">bot Module</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">How To Contribute</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hosting.html">Hosting this bot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
@@ -198,197 +197,13 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="how-to-contribute">
-<h1>How To Contribute<a class="headerlink" href="#how-to-contribute" title="Permalink to this heading">#</a></h1>
-<section id="setting-things-up">
-<h2>Setting things up<a class="headerlink" href="#setting-things-up" title="Permalink to this heading">#</a></h2>
-<ol class="arabic">
-<li><p>Fork the <code class="docutils literal notranslate"><span class="pre">memoriae-bot</span></code> repository to your GitLab account.</p></li>
-<li><p>Clone your forked repository of <code class="docutils literal notranslate"><span class="pre">memoriae-bot</span></code> to your computer:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://gitlab.com/&lt;your<span class="w"> </span>username&gt;/memoriae-bot<span class="w"> </span>--recursive
-$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>memoriae-bot
-</pre></div>
-</div>
-</li>
-<li><p>Add a track to the original repository:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>https://gitlab.com/memoriae-bot/memoriae-bot
-</pre></div>
-</div>
-</li>
-<li><p>Install dependencies:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</pre></div>
-</div>
-</li>
-<li><p>Install pre-commit hooks:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pre-commit<span class="w"> </span>install
-</pre></div>
-</div>
-</li>
-</ol>
-<section id="finding-something-to-do">
-<h3>Finding something to do<a class="headerlink" href="#finding-something-to-do" title="Permalink to this heading">#</a></h3>
-<p>If you already know what you’d like to work on, you can skip this section.</p>
-<p>If you have an idea for something to do, first check if it’s already been filed on the <a class="reference external" href="https://gitlab.com/HirschHeissIch/memoriae-bot/-/issues">issue tracker</a>. If so, add a comment to the issue saying you’d like to work on it, and we’ll help you get started! Otherwise, please file a new issue and assign yourself to it.</p>
-</section>
-<section id="instructions-for-making-a-code-change">
-<h3>Instructions for making a code change<a class="headerlink" href="#instructions-for-making-a-code-change" title="Permalink to this heading">#</a></h3>
-<p>The central development branch is <code class="docutils literal notranslate"><span class="pre">master</span></code>, which should be clean and ready for release at any time. In general, all changes should be done as feature branches based off of <code class="docutils literal notranslate"><span class="pre">master</span></code>.</p>
-<p>Here’s how to make a one-off code change.</p>
-<ol class="arabic">
-<li><p><strong>Choose a descriptive branch name.</strong> It should be lowercase, hyphen-separated, and a noun describing the change (so, <code class="docutils literal notranslate"><span class="pre">fuzzy-rules</span></code>, but not <code class="docutils literal notranslate"><span class="pre">implement-fuzzy-rules</span></code>). Also, it shouldn’t start with <code class="docutils literal notranslate"><span class="pre">hotfix</span></code> or <code class="docutils literal notranslate"><span class="pre">release</span></code>.</p></li>
-<li><p><strong>Create a new branch with this name, starting from</strong> <code class="docutils literal notranslate"><span class="pre">master</span></code>. In other words, run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>fetch<span class="w"> </span>upstream
-$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>master
-$<span class="w"> </span>git<span class="w"> </span>merge<span class="w"> </span>upstream/master
-$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>your-branch-name
-</pre></div>
-</div>
-</li>
-<li><p><strong>Make a commit to your feature branch</strong>. Each commit should be self-contained and have a descriptive commit message that helps other developers understand why the changes were made.</p>
-<ul>
-<li><p>You can refer to relevant issues in the commit message by writing, e.g., “#105”.</p></li>
-<li><p>Your code should adhere to the <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8 Style Guide</a>, with the exception that we have a maximum line length of 99.</p></li>
-<li><p>Provide static typing with signature annotations. The documentation of <a class="reference external" href="https://mypy.readthedocs.io/en/stable/index.html">MyPy</a> will be a good start, the cheat sheet is <a class="reference external" href="https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html">here</a>.</p></li>
-<li><p>Document your code. This project uses <a class="reference external" href="http://sphinx-doc.org">sphinx</a> to generate static HTML docs. To build them, first make sure you have the required dependencies:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>docs/requirements-docs.txt
-</pre></div>
-</div>
-<p>then run the following from the PTB root directory:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>make<span class="w"> </span>-C<span class="w"> </span>docs<span class="w"> </span>html
-</pre></div>
-</div>
-<p>or, if you don’t have <code class="docutils literal notranslate"><span class="pre">make</span></code> available (e.g. on Windows):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sphinx-build<span class="w"> </span>docs/source<span class="w"> </span>docs/build/html
-</pre></div>
-</div>
-<p>Once the process terminates, you can view the built documentation by opening <code class="docutils literal notranslate"><span class="pre">docs/build/html/index.html</span></code> with a browser.</p>
-</li>
-<li><p>For consistency, please conform to <a class="reference external" href="http://google.gitlab.io/styleguide/pyguide.html">Google Python Style Guide</a> and <a class="reference external" href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html">Google Python Style Docstrings</a>. In addition, code should be formatted consistently with other code around it.</p></li>
-<li><p>The following exceptions to the above (Google’s) style guides applies:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Documenting types of global variables and complex types of class members can be done using the Sphinx docstring convention.</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>Please ensure that the code you write is well-tested.</p></li>
-<li><p>Don’t break backward compatibility.</p></li>
-<li><p>To actually make the commit (this will trigger tests for yapf, lint, pep8 and mypy automatically):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>your-file-changed.py
-</pre></div>
-</div>
-</li>
-<li><p>Finally, push it to your GitLab fork, run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>your-branch-name
-</pre></div>
-</div>
-</li>
-</ul>
-</li>
-<li><p><strong>When your feature is ready to merge, create a pull request.</strong></p>
-<ul class="simple">
-<li><p>Go to your fork on GitLab, select your branch from the dropdown menu, and click “New merge request”.</p></li>
-<li><p>Add a descriptive comment explaining the purpose of the branch. This will tell the reviewer what the purpose of the branch is.</p></li>
-<li><p>Click “Create merge request”</p></li>
-</ul>
-</li>
-<li><p><strong>Address review comments until all reviewers give LGTM (‘looks good to me’).</strong></p>
-<ul>
-<li><p>When your reviewer has reviewed the code, you’ll get an email. You’ll need to respond in two ways:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Make a new commit addressing the comments you agree with, and push it to the same branch. Ideally, the commit message would explain what the commit does (e.g. “Fix lint error”), but if there are lots of disparate review comments, it’s fine to refer to the original commit message and add something like “(address review comments)”.</p></li>
-<li><p>In addition, please reply to each comment. Each reply should be either “Done” or a response explaining why the corresponding suggestion wasn’t implemented. All comments must be resolved before LGTM can be given.</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>Resolve any merge conflicts that arise. To resolve conflicts between ‘your-branch-name’ (in your fork) and ‘master’ (in the <code class="docutils literal notranslate"><span class="pre">memoriae-bot</span></code> repository), run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>your-branch-name
-$<span class="w"> </span>git<span class="w"> </span>fetch<span class="w"> </span>upstream
-$<span class="w"> </span>git<span class="w"> </span>merge<span class="w"> </span>upstream/master
-$<span class="w"> </span>...<span class="o">[</span>fix<span class="w"> </span>the<span class="w"> </span>conflicts<span class="o">]</span>...
-$<span class="w"> </span>...<span class="o">[</span>make<span class="w"> </span>sure<span class="w"> </span>the<span class="w"> </span>tests<span class="w"> </span>pass<span class="w"> </span>before<span class="w"> </span>committing<span class="o">]</span>...
-$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-a
-$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>your-branch-name
-</pre></div>
-</div>
-</li>
-<li><p>At the end, the reviewer will merge the pull request.</p></li>
-</ul>
-</li>
-<li><p><strong>Tidy up!</strong> Delete the feature branch from both your local clone and the GitLab repository:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span>your-branch-name
-$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>your-branch-name
-</pre></div>
-</div>
-</li>
-<li><p><strong>Celebrate.</strong> Congratulations, you have contributed to <code class="docutils literal notranslate"><span class="pre">memoriae-bot</span></code>!</p></li>
-</ol>
-</section>
-</section>
-<section id="style-commandments">
-<h2>Style commandments<a class="headerlink" href="#style-commandments" title="Permalink to this heading">#</a></h2>
-<section id="specific-commandments">
-<h3>Specific commandments<a class="headerlink" href="#specific-commandments" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Avoid using “double quotes” where you can reasonably use ‘single quotes’.</p></li>
-</ul>
-</section>
-<section id="assert-comparison-order">
-<h3>Assert comparison order<a class="headerlink" href="#assert-comparison-order" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>assert statements should compare in <strong>actual</strong> == <strong>expected</strong> order.</p></li>
-</ul>
-<p>For example (assuming <code class="docutils literal notranslate"><span class="pre">test_call</span></code> is the thing being tested):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># GOOD</span>
-<span class="k">assert</span> <span class="n">test_call</span><span class="p">()</span> <span class="o">==</span> <span class="mi">5</span>
-
-<span class="c1"># BAD</span>
-<span class="k">assert</span> <span class="mi">5</span> <span class="o">==</span> <span class="n">test_call</span><span class="p">()</span>
-</pre></div>
-</div>
-</section>
-<section id="properly-calling-callables">
-<h3>Properly calling callables<a class="headerlink" href="#properly-calling-callables" title="Permalink to this heading">#</a></h3>
-<p>Methods, functions and classes can specify optional parameters (with default
-values) using Python’s keyword arg syntax. When providing a value to such a
-callable we prefer that the call also uses keyword arg syntax. For example:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># GOOD</span>
-<span class="n">f</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">optional</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># BAD</span>
-<span class="n">f</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>This gives us the flexibility to re-order arguments and more importantly
-to add new required arguments. It’s also more explicit and easier to read.</p>
-</section>
-<section id="properly-defining-optional-arguments">
-<h3>Properly defining optional arguments<a class="headerlink" href="#properly-defining-optional-arguments" title="Permalink to this heading">#</a></h3>
-<p>It’s always good to not initialize optional arguments at class creation,
-instead use <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> to get them. It’s well known Telegram API can
-change without notice, in that case if a new argument is added it won’t
-break the API classes. For example:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># GOOD</span>
-<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">last_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-   <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
-
-<span class="c1"># BAD</span>
-<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">last_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-   <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
-</pre></div>
-</div>
-</section>
-</section>
-</section>
-
+          
         </article>
       </div>
       <footer>
@@ -432,38 +247,8 @@ break the API classes. For example:</p>
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">How To Contribute</a><ul>
-<li><a class="reference internal" href="#setting-things-up">Setting things up</a><ul>
-<li><a class="reference internal" href="#finding-something-to-do">Finding something to do</a></li>
-<li><a class="reference internal" href="#instructions-for-making-a-code-change">Instructions for making a code change</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#style-commandments">Style commandments</a><ul>
-<li><a class="reference internal" href="#specific-commandments">Specific commandments</a></li>
-<li><a class="reference internal" href="#assert-comparison-order">Assert comparison order</a></li>
-<li><a class="reference internal" href="#properly-calling-callables">Properly calling callables</a></li>
-<li><a class="reference internal" href="#properly-defining-optional-arguments">Properly defining optional arguments</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>
