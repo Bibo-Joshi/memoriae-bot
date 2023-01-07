@@ -20,6 +20,6 @@ the original reminder again.
 Statistics
 ----------
 
-This bot uses the `ptbstats <https://hirschheissich.gitlab.io/ptbstats/>`_ plugin to make some usage statistics
+This bot uses the `ptbstats <https://Bibo-Joshi.github.io/ptbstats/>`_ plugin to make some usage statistics
 available. The commands ``/first`` and ``/reps`` will provide statistics on all reminders sent for the first time and
 all repetitions, respectively. Note, that those commands will only work for the admin of the bot.

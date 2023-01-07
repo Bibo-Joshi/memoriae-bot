@@ -1,3 +1,1 @@
-python-telegram-bot>=13.3,<14.0
-emoji==1.2.0
-git+https://gitlab.com/HirschHeissIch/ptbstats.git@v1.3.1
+python-telegram-bot~=20.0
