@@ -22,14 +22,14 @@ repos:
         additional_dependencies:
         - python-telegram-bot~=20.3
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.3.0
+    rev: v1.4.1
     hooks:
       - id: mypy
         files: ^(main|bot).py$
         additional_dependencies:
         - python-telegram-bot~=20.3
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.4.0
+    rev: v3.8.0
     hooks:
       - id: pyupgrade
         args:
@@ -42,8 +42,8 @@ repos:
         args:
         - --diff
         - --check
-  - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: v0.0.270
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.0.276
     hooks:
       - id: ruff
         additional_dependencies:
