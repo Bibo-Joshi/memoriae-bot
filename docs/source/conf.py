@@ -40,7 +40,7 @@ extensions = [
 # Use intersphinx to reference the python-telegram-bot docs
 intersphinx_mapping = {
     "telegram": ("https://python-telegram-bot.readthedocs.io/en/stable/", None),
-    "https://docs.python.org/": None,
+    "python": ("https://docs.python.org/", None),
 }
 
 # Include special members in doc

@@ -16,6 +16,5 @@
    :caption: Developer Reference
 
    bot
-   contributing
    hosting
    changelog
