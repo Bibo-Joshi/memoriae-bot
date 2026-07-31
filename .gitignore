@@ -1,28 +1,3 @@
- # Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-
-# Unit test / coverage reports (not currently used)
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-.pytest_cache
-nosetests.xml
-coverage.xml
-*,cover
-.coveralls.yml
-.mypy_cache
-
-# Sphinx documentation
-docs/build/
-
-# Pickle and log files
-mb*
-
-# Bot token
-TOKEN
-
-# Venv
-venv/
+.tgcloud/
+.idea/
+node_modules/
