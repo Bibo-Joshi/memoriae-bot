@@ -1,0 +1,14 @@
+{
+  "name": "memoriae-bot",
+  "private": true,
+  "devDependencies": {
+    "@tgcloud/cli": "^0.1.2"
+  },
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "deploy": "node_modules/.bin/tgcloud push",
+    "status": "node_modules/.bin/tgcloud status",
+    "run": "node_modules/.bin/tgcloud run"
+  }
+}
