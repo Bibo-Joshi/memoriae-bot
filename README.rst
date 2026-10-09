@@ -1,10 +1,6 @@
 Memoriae Bot
 ============
 
-.. image:: https://img.shields.io/badge/documentation-is%20here-orange
-   :target: https://Bibo-Joshi.github.io/memoriae-bot
-   :alt: Documentation
-
 .. image:: https://img.shields.io/badge/chat%20on-Telegram-blue
    :target: https://t.me/memoriae_bot
    :alt: Telegram Chat
